@@ -1,0 +1,14 @@
+
+
+
+
+<%= link_to("BACK TO LIST", subjects_path, :class => 'back-link')%>
+<div class="subject new">
+  <h1>Update Subject</h1>
+  <%= form_for(@subject,:url => subject_path(@subject),:method => 'patch')do |f| %>
+  <%= render(:partial => 'form',:locals => {:f => f}) %>
+  <div class="form-buttons">
+    <%= f.submit("Update Subject")%>
+  </div>
+  <%end%>
+</div>
